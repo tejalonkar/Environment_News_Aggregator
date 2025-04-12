@@ -98,7 +98,7 @@ async function fetchNews(topic) {
 
   try {
     // Try to fetch from NewsAPI
-    const apiKey = "YOUR_NEWS_API_KEY" // Replace with your actual API key
+    const apiKey = API_KEY
     const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(topic)}&language=en&sortBy=publishedAt&apiKey=${apiKey}`
 
     let articles

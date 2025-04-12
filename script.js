@@ -1,6 +1,6 @@
 // API key for NewsAPI
 // Note: In production, this should be handled server-side as NewsAPI restricts client-side API calls in their free plan
-const API_KEY = "465d8d612c68450ca153cbf838650abf"
+const API_KEY = "PASTE API KEY HERE*******"
 const BASE_URL = "https://newsapi.org/v2/everything"
 
 // DOM elements

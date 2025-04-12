@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental News Aggregator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Environmental News</h1>
+            <p>Stay informed about our planet</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <h2>Filter by Topic</h2>
+            <div class="topic-buttons">
+                <button class="topic-btn active" data-topic="environment">All Environmental News</button>
+                <button class="topic-btn" data-topic="climate change">Climate Change</button>
+                <button class="topic-btn" data-topic="renewable energy">Renewable Energy</button>
+                <button class="topic-btn" data-topic="conservation">Conservation</button>
+                <button class="topic-btn" data-topic="sustainability">Sustainability</button>
+            </div>
+        </div>
+
+        <div class="news-container" id="newsContainer">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading articles...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Environmental News Aggregator &copy; 2025</p>
+            <p class="api-credit">Powered by <a href="https://newsapi.org" target="_blank">NewsAPI.org</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

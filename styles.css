@@ -1,223 +1,204 @@
 :root {
-    --primary-color: #2e7d32;
-    --secondary-color: #4caf50;
-    --light-color: #e8f5e9;
-    --dark-color: #1b5e20;
+    --primary-color: #4CAF50; /* Fresh Green */
+    --secondary-color: #81C784; /* Light Green */
+    --background-color: #f4f4f4; /* Light Background */
     --text-color: #333;
-    --light-text: #f5f5f5;
-    --border-radius: 8px;
-    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  * {
+    --border-radius: 6px;
+    --transition: all 0.3s ease;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Roboto", sans-serif;
-    line-height: 1.6;
+    background-color: var(--background-color);
     color: var(--text-color);
-    background-color: #f9f9f9;
-  }
-  
-  .container {
+    line-height: 1.6;
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  header {
+}
+
+header {
     background-color: var(--primary-color);
-    color: var(--light-text);
-    padding: 2rem 0;
+    color: white;
+    padding: 1.5rem;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
+}
+
+header h1 {
+    font-size: 2rem;
     margin-bottom: 0.5rem;
-  }
-  
-  main {
+}
+
+header p {
+    font-size: 1rem;
+}
+
+main {
     padding: 2rem 0;
-  }
-  
-  .filters {
-    margin-bottom: 2rem;
-  }
-  
-  .filters h2 {
-    margin-bottom: 1rem;
-    color: var(--dark-color);
-  }
-  
-  .topic-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+}
+
+.filters {
     margin-bottom: 1.5rem;
-  }
-  
-  .topic-btn {
-    padding: 8px 16px;
+}
+
+.filters h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.topic-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.topic-btn {
+    padding: 8px 14px;
     background-color: #fff;
     border: 1px solid var(--secondary-color);
     border-radius: var(--border-radius);
     color: var(--primary-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
     font-size: 0.9rem;
-  }
-  
-  .topic-btn:hover {
-    background-color: var(--light-color);
-  }
-  
-  .topic-btn.active {
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.topic-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.topic-btn.active {
     background-color: var(--primary-color);
     color: white;
-  }
-  
-  .news-container {
+}
+
+.news-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-  }
-  
-  .article-card {
+}
+
+.article-card {
     background-color: #fff;
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-  }
-  
-  .article-card:hover {
+}
+
+.article-card:hover {
     transform: translateY(-5px);
-  }
-  
-  .article-image {
+}
+
+.article-image {
     width: 100%;
     height: 180px;
     object-fit: cover;
-  }
-  
-  .article-content {
-    padding: 1.5rem;
-  }
-  
-  .article-source {
-    display: inline-block;
-    background-color: var(--light-color);
-    color: var(--dark-color);
+}
+
+.article-content {
+    padding: 1.2rem;
+}
+
+.article-source {
+    background-color: var(--secondary-color);
+    color: #fff;
     padding: 4px 8px;
-    border-radius: 4px;
     font-size: 0.8rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .article-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    color: var(--text-color);
-  }
-  
-  .article-date {
-    color: #666;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.article-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.article-date {
+    color: #777;
     font-size: 0.9rem;
     margin-bottom: 1rem;
-  }
-  
-  .read-more {
-    display: inline-block;
+}
+
+.read-more {
     background-color: var(--primary-color);
     color: white;
     padding: 8px 16px;
-    border-radius: var(--border-radius);
     text-decoration: none;
-    font-weight: 500;
+    border-radius: var(--border-radius);
     transition: background-color 0.3s ease;
-  }
-  
-  .read-more:hover {
-    background-color: var(--dark-color);
-  }
-  
-  .loading {
+}
+
+.read-more:hover {
+    background-color: #388E3C;
+}
+
+.loading {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    grid-column: 1 / -1;
     padding: 3rem 0;
-  }
-  
-  .spinner {
+}
+
+.spinner {
     width: 40px;
     height: 40px;
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     border-top-color: var(--primary-color);
-    animation: spin 1s ease-in-out infinite;
-    margin-bottom: 1rem;
-  }
-  
-  @keyframes spin {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  .error-message {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 2rem;
-    background-color: #ffebee;
-    border-radius: var(--border-radius);
-    color: #c62828;
-  }
-  
-  footer {
-    background-color: var(--dark-color);
-    color: var(--light-text);
-    padding: 1.5rem 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
     text-align: center;
     margin-top: 2rem;
-  }
-  
-  .api-credit {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .api-credit a {
-    color: var(--light-color);
-  }
-  
-  @media (max-width: 768px) {
+}
+
+.api-credit a {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
     .news-container {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-  
+
     header h1 {
-      font-size: 2rem;
+        font-size: 1.8rem;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .news-container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  
+
     .topic-buttons {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .topic-btn {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+}

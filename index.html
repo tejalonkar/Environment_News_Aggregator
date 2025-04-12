@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Environmental News Aggregator</title>
+    <title>Eco News</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Environmental News</h1>
-        <p>Stay informed about our planet</p>
-    </header>
+    <div class="app-container">
+        <header>
+            <h1>ENVIRONMENT NEWS</h1>
+        </header>
 
-    <main>
-        <div class="filters">
-            <button class="topic-btn active" data-topic="environment">All News</button>
-            <button class="topic-btn" data-topic="climate change">Climate Change</button>
-            <button class="topic-btn" data-topic="renewable energy">Renewable Energy</button>
-            <button class="topic-btn" data-topic="conservation">Conservation</button>
-            <button class="topic-btn" data-topic="sustainability">Sustainability</button>
-        </div>
+        <nav class="topic-filter">
+            <button class="filter-btn active" data-topic="environment">All</button>
+            <button class="filter-btn" data-topic="climate change">Climate</button>
+            <button class="filter-btn" data-topic="renewable energy">Energy</button>
+            <button class="filter-btn" data-topic="conservation">Conservation</button>
+            <button class="filter-btn" data-topic="sustainability">Sustainability</button>
+        </nav>
 
-        <div class="news-container" id="newsContainer">
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
+        <main>
+            <div id="loading" class="loading">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
             </div>
-        </div>
-    </main>
+            <div id="news-list" class="news-list"></div>
+        </main>
 
-    <footer>
-        <p>Powered by <a href="https://newsapi.org" target="_blank">NewsAPI.org</a></p>
-    </footer>
-
+        <footer>
+            <p>© 2025 eco news</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
